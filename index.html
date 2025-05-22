@@ -28,9 +28,7 @@ layout: default
 </section>
 
 <section class="essays-section">
-  <h2>Recent Essays</h2>
-  <p>Stay up-to-date with the latest essays from Ekagra Sinha.</p>
-  
+  <h2>Recent Essays</h2>  
   <div class="essays-grid">
     {% assign recent_essays = site.essays | sort: "date" | reverse %}
     {% if recent_essays.size > 0 %}
