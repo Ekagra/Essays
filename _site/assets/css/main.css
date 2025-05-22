@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #2d3748;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", "Times New Roman", serif;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1a202c;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+a {
+  color: #1a202c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #718096;
+}
+
+ul, ol {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1a202c;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: #1a202c;
+  margin-bottom: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/wood-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: 1;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.hero .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.essays-section {
+  margin-bottom: 60px;
+}
+.essays-section h2 {
+  margin-bottom: 15px;
+}
+.essays-section p {
+  margin-bottom: 30px;
+  color: #4a5568;
+}
+
+.essays-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .essays-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .essays-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.essay-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.essay-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+.essay-card .essay-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+}
+.essay-card .essay-card-icon {
+  margin-bottom: 15px;
+}
+.essay-card .essay-card-icon svg {
+  fill: #718096;
+  width: 24px;
+  height: 24px;
+}
+.essay-card .essay-card-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+.essay-card .essay-card-content p {
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.essay {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.essay .essay-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.essay .essay-header .back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #718096;
+}
+.essay .essay-header .back-link:hover {
+  text-decoration: underline;
+}
+.essay .essay-header h1 {
+  margin-bottom: 15px;
+}
+.essay .essay-header .essay-meta {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+.essay .essay-header .essay-meta time {
+  margin-right: 15px;
+}
+.essay .essay-header .essay-meta .category {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 8px;
+  background-color: #f7fafc;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+.essay .essay-header .essay-meta .category:hover {
+  background-color: rgb(228.4545454545, 238.4090909091, 245.0454545455);
+}
+.essay .essay-content {
+  line-height: 1.8;
+}
+.essay .essay-content h2, .essay .essay-content h3, .essay .essay-content h4 {
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+.essay .essay-content img {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  border-radius: 4px;
+}
+.essay .essay-content blockquote {
+  margin: 30px 0;
+  padding-left: 30px;
+  border-left: 4px solid #718096;
+  color: #4a5568;
+  font-style: italic;
+}
+.essay .essay-content code {
+  background-color: #f7fafc;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.essay .essay-content pre {
+  background-color: #f7fafc;
+  padding: 30px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+.essay .essay-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+.essay .essay-footer {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #f7fafc;
+}
+.essay .essay-footer .essay-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.essay .essay-footer .essay-navigation .prev, .essay .essay-footer .essay-navigation .next {
+  max-width: 45%;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  border-top: 1px solid #f7fafc;
+}
+
+.page-not-found {
+  text-align: center;
+  padding: 60px 0;
+}
+.page-not-found h1 {
+  font-size: 5rem;
+  margin-bottom: 15px;
+}
+.page-not-found p {
+  margin-bottom: 30px;
+  color: #4a5568;
+}
+
+/*# sourceMappingURL=main.css.map */

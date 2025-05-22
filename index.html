@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Essays by Ekagra Sinha</h1>
+    <a href="#featured-essays" class="button">Explore Essays</a>
+  </div>
+</div>
+
+<section id="featured-essays" class="essays-section">
+  <h2>Featured Essays</h2>  
+  <div class="essays-grid">
+      {% assign featured_essays = site.essays | where: "featured", true | sort: "date" | reverse %}
+      {% if featured_essays.size > 0 %}
+        {% for essay in featured_essays limit: 3 %}
+          {% include essay-card.html essay=essay %}
+        {% endfor %}
+      {% else %}
+        <!-- Final fallback: show most recent -->
+        {% assign fallback_essays = site.essays | sort: "date" | reverse %}
+        {% for essay in fallback_essays limit: 3 %}
+          {% include essay-card.html essay=essay %}
+        {% endfor %}
+      {% endif %}
+  </div>
+</section>
+
+<section class="essays-section">
+  <h2>Recent Essays</h2>
+  <p>Stay up-to-date with the latest essays from Ekagra Sinha.</p>
+  
+  <div class="essays-grid">
+    {% assign recent_essays = site.essays | sort: "date" | reverse %}
+    {% if recent_essays.size > 0 %}
+      {% for essay in recent_essays limit: 3 %}
+        {% include essay-card.html essay=essay %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
