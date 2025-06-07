@@ -88,7 +88,7 @@ img {
   justify-content: center;
   text-align: center;
   color: white;
-  background: url("../images/essay_background.png") center/cover no-repeat;
+  background: url('{{ "/assets/images/essay_background.png" | relative_url }}') center/cover no-repeat;
   margin-bottom: 60px;
   border-radius: 8px;
   overflow: hidden;
