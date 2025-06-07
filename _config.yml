@@ -5,13 +5,13 @@ author: Ekagra Sinha
   
 # Build settings
 markdown: kramdown
-permalink: /essays/:title/
+permalink: /:title/
 
 # Collections
 collections:
   essays:
     output: true
-    permalink: /essays/:title/
+    permalink: /:title/
     sort_by: date
 
 # Defaults
