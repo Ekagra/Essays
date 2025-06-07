@@ -11,8 +11,7 @@
 	justify-content: center;
 	text-align: center;
 	color: white;
-    background: url('{{ "/assets/images/essay_background.png" | relative_url }}') center/cover no-repeat;
-	margin-bottom: $spacing-large;
+	background: url('/essay/assets/images/essay_background.png') center/cover no-repeat;	margin-bottom: $spacing-large;
 	border-radius: 8px;
 	overflow: hidden;
 
