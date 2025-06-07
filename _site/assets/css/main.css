@@ -81,29 +81,17 @@ img {
 
 .hero {
   position: relative;
-  height: 500px;
+  height: 600px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  background-color: #1a202c;
+  background: url("../images/essay_background.png") center/cover no-repeat;
   margin-bottom: 60px;
   border-radius: 8px;
   overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/assets/images/essay_background.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6;
-  z-index: 1;
 }
 .hero .hero-content {
   position: relative;
@@ -114,7 +102,7 @@ img {
   color: white;
   font-size: 3rem;
   margin-bottom: 15px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .hero .subtitle {
   font-size: 1.2rem;
@@ -225,7 +213,9 @@ img {
 .essay .essay-content {
   line-height: 1.8;
 }
-.essay .essay-content h2, .essay .essay-content h3, .essay .essay-content h4 {
+.essay .essay-content h2,
+.essay .essay-content h3,
+.essay .essay-content h4 {
   margin-top: 60px;
   margin-bottom: 15px;
 }
@@ -267,7 +257,8 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.essay .essay-footer .essay-navigation .prev, .essay .essay-footer .essay-navigation .next {
+.essay .essay-footer .essay-navigation .prev,
+.essay .essay-footer .essay-navigation .next {
   max-width: 45%;
 }
 
